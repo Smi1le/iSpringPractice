@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+}
+#testCanvas {
+  position: absolute;
+  top: 0;
+}
+
+#btn {
+  width: 100px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+}
+
+#block {
+  background-color: #75fa9c;
+  position: absolute;
+}
