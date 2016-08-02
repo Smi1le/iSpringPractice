@@ -17,7 +17,7 @@ goog.scope(function() {
             /** @private {?number} */
             this._startTime = null;
 
-            /** @private {!number} */
+            /** @private {?number} */
             this._time = null;
 
             /** @private {!number} */

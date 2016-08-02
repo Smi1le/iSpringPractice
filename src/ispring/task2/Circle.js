@@ -1,35 +1,26 @@
-goog.provide("ispring.task2.Block");
+goog.provide("ispring.task2.Circle");
 
 goog.require("goog.style");
 goog.require("goog.dom");
-
+goog.require("goog.array");
 
 goog.scope(function()
 {
     /**
      * @constructor
      */
-    ispring.task2.Block = goog.defineClass(null, {
-        constructor:function(number, size, pos)
+    ispring.task2.Circle = goog.defineClass(null, {
+        constructor:function()
         {
-            /**@private {number}*/
-            this._number = number;
-
             /**@private*/
-            this._size = size;
-
-            /**@private*/
-            this._position = pos;
+            this._position = ispring.task2.Circle.POSITION;
 
             /**@private {boolean}*/
             this._timeRemove = false;
 
-            /**@private {!Element}*/
-            this._body = goog.dom.createElement("div");
-            this._body.id ="block";
-            this._body.name = "block" + number;
-            document.body.appendChild(this._body);
-            this._createNewBlock();
+            /**@private {Array}*/
+            this._elements = [];
+            this._create();
         },
 
 
@@ -37,10 +28,19 @@ goog.scope(function()
         /**
          * @private
          */
-        _createNewBlock:function()
+        _create:function()
         {
-            this.move();
-            goog.style.setSize(this._body, this._size.width, this._size.height);
+            // this.move();
+            // goog.style.setSize(this._body, this._size.width, this._size.height);
+            for (var i = 0; i != 2; ++i)
+            {
+                var circle = goog.dom.createElement("div");
+                circle.id = "circle";
+                goog.style.setPosition(circle, this._position.x, this._position.y);
+                document.body.appendChild(circle);
+                goog.array.insert(this._elements, circle);
+            }
+
         },
 
         /**
@@ -79,6 +79,12 @@ goog.scope(function()
         getTimeRemove:function()
         {
             return this._timeRemove;
+        },
+
+        statics:
+        {
+            POSITION: {x : 550, y : 450},
+            RADIUS: 100
         }
     });
 
