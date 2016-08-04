@@ -3,6 +3,9 @@ goog.provide("ispring.task2.Game");
 goog.require("ispring.task2.Obstacles");
 goog.require("ispring.task2.Circle");
 goog.require("goog.dom");
+goog.require("goog.style");
+goog.require("goog.math");
+
 
 goog.scope(function()
 {
@@ -19,7 +22,11 @@ goog.scope(function()
 
             /**@type {!Element}*/
             var brd = goog.dom.createElement(goog.dom.TagName.DIV);
+            var outlinePosition = ispring.task2.Game.OUTLINE_POSITION;
+            var outlineSize = ispring.task2.Game.OUTLINE_SIZE;
             brd.id = "brd";
+            goog.style.setPosition(brd, outlinePosition.x, outlinePosition.y);
+            goog.style.setSize(brd, outlineSize.width, outlineSize.height);
             document.body.appendChild(brd);
 
             /**@private {ispring.task2.Circle}*/
@@ -44,9 +51,10 @@ goog.scope(function()
 
         statics:
         {
-            WIDTH:1366,
-            HEIGHT:768,
-            OUTLINE_POSITION : {x : 300, y : -30}
+            WIDTH : 1366,
+            HEIGHT : 768,
+            OUTLINE_POSITION : new goog.math.Coordinate(300, -30),
+            OUTLINE_SIZE : new goog.math.Size(500, 800)
         }
     });
 

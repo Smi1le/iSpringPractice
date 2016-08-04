@@ -15,10 +15,10 @@ goog.scope(function()
             /**@private {number}*/
             this._number = number;
 
-            /**@private*/
+            /**@private {goog.math.Size}*/
             this._size = size;
 
-            /**@private*/
+            /**@private {goog.math.Coordinate}*/
             this._position = pos;
 
             /**@private {boolean}*/

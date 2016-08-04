@@ -21,9 +21,7 @@ body {
 {
   border-radius: 100%;
   background: black;
-  position: absolute;
-  width: 25px;
-  height: 25px;
+  position: fixed;
 }
 
 #block {
@@ -32,12 +30,8 @@ body {
 }
 
 #brd{
-  border: 8px inset greenyellow;
+  border: 10px inset greenyellow;
   background: #a4e7fc;
-  width: 500px;
-  height: 800px;
   position: relative;
-  left: 300px;
-  top: -30px;
 }
 

@@ -50,7 +50,7 @@ goog.scope(function() {
         },
     
         /**
-         * @return {!number}
+         * @return {!number|null}
          */
         time: function()
         {
