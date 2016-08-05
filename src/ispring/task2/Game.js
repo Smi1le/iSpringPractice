@@ -1,7 +1,6 @@
 goog.provide("ispring.task2.Game");
 
-goog.require("ispring.task2.Obstacles");
-goog.require("ispring.task2.Circle");
+goog.require("ispring.task2.GL");
 goog.require("goog.dom");
 goog.require("goog.style");
 goog.require("goog.math");
@@ -15,11 +14,6 @@ goog.scope(function()
     ispring.task2.Game = goog.defineClass(null, {
         constructor:function()
         {
-            /**@private {ispring.task2.Obstacles}*/
-            this._obstacle = new ispring.task2.Obstacles();
-
-
-
             /**@type {!Element}*/
             var brd = goog.dom.createElement(goog.dom.TagName.DIV);
             var outlinePosition = ispring.task2.Game.OUTLINE_POSITION;
@@ -28,9 +22,12 @@ goog.scope(function()
             goog.style.setPosition(brd, outlinePosition.x, outlinePosition.y);
             goog.style.setSize(brd, outlineSize.width, outlineSize.height);
             document.body.appendChild(brd);
+            this._gl = new ispring.task2.GL();
 
-            /**@private {ispring.task2.Circle}*/
-            this._circle = new ispring.task2.Circle();
+
+
+
+           
         },
 
         /**
@@ -38,7 +35,7 @@ goog.scope(function()
          */
         createGameElements:function()
         {
-            this._obstacle.run();
+            this._gl.run();
         },
 
         /**

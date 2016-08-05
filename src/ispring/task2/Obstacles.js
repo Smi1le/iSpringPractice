@@ -18,7 +18,7 @@ goog.scope(function()
             this._number = 0;
 
             /**@private {Array}*/
-            this._arrayElements = [];//Заменить на goog.array
+            this._arrayElements = [];
 
             /**@private {ispring.MyTimer}*/
             this._timerRedraw = new ispring.MyTimer(goog.bind(this._redraw, this), 100);
@@ -90,7 +90,6 @@ goog.scope(function()
         },
 
         /**
-         *
          * @private
          */
         _createObstacle:function()
@@ -122,7 +121,6 @@ goog.scope(function()
         run:function()
         {
             this._createObstacle();
-            // this._timerCreateObstacles.start();
             this.draw();
             this._timerRedraw.start();
 
@@ -139,11 +137,8 @@ goog.scope(function()
                 element.checkGoingTheScreen();
                 if (element.getTimeRemove())
                 {
-                    // console.log("removed");
-                    // console.log(this._arrayElements.length);
                     element.remove();
-                    this._arrayElements.splice(i, 1);
-                    --i;
+                    this._arrayElements.splice(i--, 1);
                 }
 
             }
@@ -154,6 +149,15 @@ goog.scope(function()
                 this._createObstacle();
                 this._remainingDistance =  ispring.task2.Obstacles.DISTANCE_BETWEEN_BLOCKS;
             }
+        },
+
+        /**
+         * @public
+         * @returns {Array}
+         */
+        getListObstacles:function()
+        {
+            return this._arrayElements;
         },
 
         /**

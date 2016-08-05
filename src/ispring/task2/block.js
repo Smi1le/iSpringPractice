@@ -2,6 +2,7 @@ goog.provide("ispring.task2.Block");
 
 goog.require("goog.style");
 goog.require("goog.dom");
+goog.require("goog.math");
 
 
 goog.scope(function()
@@ -41,6 +42,35 @@ goog.scope(function()
         {
             this.move();
             goog.style.setSize(this._body, this._size.width, this._size.height);
+        },
+
+        /**
+         * @returns {goog.math.Coordinate}
+         * @public
+         */
+        getCenterCoordinates:function()
+        {
+            var x = this._position.x + (this._size.width / 2);
+            var y = this._position.y + (this._size.height / 2);
+            return new goog.math.Coordinate(x, y);
+        },
+
+        /**
+         * @returns {goog.math.Coordinate}
+         * @public
+         */
+        getPosition:function()
+        {
+            return this._position;
+        },
+
+        /**
+         * @returns {goog.math.Size}
+         * @public
+         */
+        getSize:function()
+        {
+            return this._size;
         },
 
         /**
