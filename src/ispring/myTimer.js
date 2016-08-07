@@ -45,7 +45,6 @@ goog.scope(function() {
                 return;
             }
             this._timerObject.stop();
-            this._invalidateTime();
             this._startTime = null;
         },
     
