@@ -2,8 +2,6 @@ goog.provide("ispring.task2.Game");
 
 goog.require("ispring.task2.GL");
 goog.require("ispring.task2.UI");
-goog.require("goog.dom");
-goog.require("goog.style");
 goog.require("goog.math");
 
 
