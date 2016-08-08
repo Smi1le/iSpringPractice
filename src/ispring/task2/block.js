@@ -25,6 +25,9 @@ goog.scope(function()
             /**@private {boolean}*/
             this._timeRemove = false;
 
+            /**@private {boolean}*/
+            this._counted = false;
+
             /**@private {!Element}*/
             this._body = goog.dom.createElement("div");
             this._body.id ="block";
@@ -81,6 +84,23 @@ goog.scope(function()
         {
             this._position.y += ispring.task2.Obstacles.MOVE_STEP;
             goog.style.setPosition(this._body, this._position.x, this._position.y);
+        },
+
+        /**
+         * @public
+         * @returns {boolean}
+         */
+        getCounted:function()
+        {
+           return this._counted;
+        },
+
+        /**
+         * @public
+         */
+        passedBall:function()
+        {
+            this._counted = true;
         },
 
         /**

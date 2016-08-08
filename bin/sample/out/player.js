@@ -4055,9 +4055,10 @@ goog.addDependency('../../../src/ispring/sample/Foo.js', ['ispring.sample.Foo'],
 goog.addDependency('../../../src/ispring/sample/IFoo.js', ['ispring.sample.IFoo'], [], false);
 goog.addDependency('../../../src/ispring/sample/SimpleFoo.js', ['ispring.sample.SimpleFoo'], [], false);
 goog.addDependency('../../../src/ispring/task2/Ball.js', ['ispring.task2.Ball'], ['goog.array', 'goog.dom', 'goog.events', 'goog.math', 'goog.style', 'ispring.MyTimer'], false);
-goog.addDependency('../../../src/ispring/task2/Game.js', ['ispring.task2.Game'], ['goog.dom', 'goog.math', 'goog.style', 'ispring.task2.GL'], false);
+goog.addDependency('../../../src/ispring/task2/Game.js', ['ispring.task2.Game'], ['goog.dom', 'goog.math', 'goog.style', 'ispring.task2.GL', 'ispring.task2.UI'], false);
 goog.addDependency('../../../src/ispring/task2/GameLogic.js', ['ispring.task2.GL'], ['ispring.MyTimer', 'ispring.task2.Ball', 'ispring.task2.Obstacles'], false);
 goog.addDependency('../../../src/ispring/task2/Obstacles.js', ['ispring.task2.Obstacles'], ['goog.array', 'goog.math', 'ispring.MyTimer', 'ispring.task2.Block'], false);
+goog.addDependency('../../../src/ispring/task2/UserInterface.js', ['ispring.task2.UI'], ['goog.dom', 'goog.math', 'goog.style'], false);
 goog.addDependency('../../../src/ispring/task2/block.js', ['ispring.task2.Block'], ['goog.dom', 'goog.math', 'goog.style'], false);
 goog.addDependency('../main.js', ['Sample', '__tmp.Module0'], ['ispring.task2.Game'], false);
 

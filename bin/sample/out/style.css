@@ -35,3 +35,10 @@ body {
   position: relative;
 }
 
+#scoreTable{
+  position: absolute;
+  font-family: "Arial Black", Times, sans-serif;
+  font-size: 40px;
+  color: #00aadd;
+}
+

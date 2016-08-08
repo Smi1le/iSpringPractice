@@ -94,7 +94,7 @@ goog.scope(function()
          */
         _createObstacle:function()
         {
-            var obstacleType = 4;//this._getRandomNumber(1, 6);
+            var obstacleType = this._getRandomNumber(1, 6);
             var newObstacles = this._getNewObstacle(++this._number, obstacleType);
             for(var i = 0; i != newObstacles.length; ++i)
             {

@@ -45,6 +45,7 @@ goog.scope(function() {
                 return;
             }
             this._timerObject.stop();
+            this._time = goog.now() - this._startTime;
             this._startTime = null;
         },
     

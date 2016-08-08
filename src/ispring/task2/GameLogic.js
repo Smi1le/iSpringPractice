@@ -12,8 +12,11 @@ goog.scope(function()
      * @constructor
      */
     ispring.task2.GL = goog.defineClass(null, {
-        constructor: function ()
+        constructor: function (ui)
         {
+            /**@private {number}*/
+            this._score = 0;
+
             /**@private {ispring.task2.Obstacles}*/
             this._obstacles = new ispring.task2.Obstacles();
 
@@ -22,6 +25,9 @@ goog.scope(function()
 
             /**@private {ispring.MyTimer}*/
             this._checkCollTimer = new ispring.MyTimer(goog.bind(this.checkCollision, this), ispring.task2.GL.INTERVAL_CHECK_COLLISION);
+
+            /**@private {ispring.task2.UI}*/
+            this._ui = ui;
         },
 
         /** @public */
@@ -69,7 +75,11 @@ goog.scope(function()
                         }
                     }
                 }
-                
+                if((centerCoordinates.y - posBall[0].y > ballRadius + HALF_BLOCK_HEIGHT) && !listObstacles[i].getCounted())
+                {
+                    listObstacles[i].passedBall();
+                    this._ui.setScore(++this._score);
+                }
             }
             console.log("yes");
         },
