@@ -94,7 +94,7 @@ goog.scope(function()
 
         statics:
         {
-            INTERVAL_CHECK_COLLISION : 20,
+            INTERVAL_CHECK_COLLISION : 100,
             NUMBER_CONTROL_POINTS : 12
         }
 

@@ -108,7 +108,7 @@ goog.scope(function()
          */
         checkGoingTheScreen:function()
         {
-            if (!this._timeRemove && this._position.y > ispring.task2.Game.HEIGHT)
+            if (!this._timeRemove && this._position.y > ispring.task2.UI.HEIGHT)
             {
                 this._timeRemove = true;
             }

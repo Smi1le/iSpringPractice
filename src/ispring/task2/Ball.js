@@ -56,7 +56,7 @@ goog.scope(function()
             {
                 var circlePosition = goog.style.getPosition(this._elements[i]);
                 var centerPoint = ispring.task2.Ball.POSITION;
-                var distanceToBorder = ispring.task2.Game.OUTLINE_SIZE.width / 2;
+                var distanceToBorder = ispring.task2.UI.OUTLINE_SIZE.width / 2;
                 if ((this._isMouseClick && ((i == 0 && circlePosition.x > centerPoint.x - distanceToBorder + 10) ||
                     (i == 1 && circlePosition.x < centerPoint.x + distanceToBorder +- 10))) || !this._isMouseClick) {
                     console.log("i = " + i);

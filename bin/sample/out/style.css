@@ -5,14 +5,8 @@ body {
   cursor: default;
   -webkit-tap-highlight-color: transparent;
 }
-#testCanvas {
-  position: absolute;
-  top: 0;
-}
 
 #btn {
-  width: 100px;
-  height: 30px;
   background-color: red;
   position: absolute;
 }

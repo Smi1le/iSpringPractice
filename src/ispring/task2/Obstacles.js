@@ -41,7 +41,7 @@ goog.scope(function()
             console.log(typeBlock);
             var block = ispring.task2.Block;
             var BLOCKS_HEIGHT = ispring.task2.Obstacles.BLOCKS_HEIGHT;
-            var OUTLINE_POSITION = ispring.task2.Game.OUTLINE_POSITION;
+            var OUTLINE_POSITION = ispring.task2.UI.OUTLINE_POSITION;
             if (typeBlock == 1)
             {
                 //35 - отходит от края , чтобы выглядело по середине
